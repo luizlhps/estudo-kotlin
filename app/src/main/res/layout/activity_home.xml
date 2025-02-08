@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.ui.HomeActivity">]
+
+    <ImageView
+        android:id="@+id/home_pokeball_bg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:translationX="-150dp"
+        android:translationY="-70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintWidth_percent="1"
+        app:srcCompat="@drawable/pokeball" />
+
+
+    <TextView
+        android:id="@+id/home_sub_title"
+        android:layout_width="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/alexandria_thin"
+        android:text="Selecione Seu"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/home_linear_layout_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/home_sub_title"
+        app:layout_constraintTop_toBottomOf="@+id/home_sub_title"
+        android:orientation="horizontal"
+        android:translationY="-16dp"
+        android:gravity="center_vertical"
+        >
+
+    <TextView
+        android:id="@+id/home_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/alexandria"
+        android:text="Pokemon"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        android:layout_marginEnd="8dp"
+        />
+
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@mipmap/ic_pokeball_foreground"
+     />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/home_carousel_recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        app:layout_constraintBottom_toTopOf="@+id/home_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_linear_layout_title"
+        app:layout_constraintVertical_bias="0.937" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/home_button"
+        style="@style/Widget.Material3.Button.ElevatedButton.Icon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginTop="600dp"
+        android:fontFamily="@font/alexandria"
+        android:text="Registrar Pokemon"
+        android:textColor="@color/gray"
+        android:textSize="16sp"
+        app:backgroundTint="@color/colorOnBackground"
+        app:layout_constraintBottom_toBottomOf="parent
+"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9"
+        app:rippleColor="#DCC3C3" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
