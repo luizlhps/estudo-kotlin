@@ -11,16 +11,17 @@ import coil3.request.crossfade
 import coil3.request.placeholder
 import com.luiz.pokeapp.databinding.ActivityItemCarouselBinding
 import com.luiz.pokeapp.domain.model.Pokemon
+import com.luiz.pokeapp.domain.model.PokemonApp
 import kotlinx.coroutines.coroutineScope
 
-class CarouselAdapter(private val pokemons: List<Pokemon>) :
+class CarouselAdapter(private val pokemons: List<PokemonApp>) :
     RecyclerView.Adapter<CarouselAdapter.ViewHolder>() {
 
 
     inner class ViewHolder(private val binding: ActivityItemCarouselBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        private lateinit var pokemon: Pokemon
+        private lateinit var pokemon: PokemonApp
 
         init {
             itemView.setOnClickListener {
@@ -33,7 +34,7 @@ class CarouselAdapter(private val pokemons: List<Pokemon>) :
             }
         }
 
-        fun bind(pokemon: Pokemon) {
+        fun bind(pokemon: PokemonApp) {
             this.pokemon = pokemon
 
             binding.carouselImageView.load(pokemon.url) {

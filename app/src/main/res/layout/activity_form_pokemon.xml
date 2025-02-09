@@ -11,13 +11,12 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/main"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context=".presentation.ui.FormPokemon"
-        >
+        tools:context=".presentation.ui.FormPokemon">
 
 
-         <TextView
+        <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -42,14 +41,15 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="400dp"
             android:layout_marginTop="70dp"
-            android:src="@drawable/charizard"
             app:layout_constraintBottom_toTopOf="@+id/valorLayout"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/form_pokeball_bg" />
+            app:layout_constraintTop_toTopOf="@+id/form_pokeball_bg"
+            app:layout_constraintVertical_bias="0.491" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/valorLayout"
@@ -73,8 +73,8 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.button.MaterialButton
-            style="@style/Widget.Material3.Button.ElevatedButton.Icon"
             android:id="@+id/btn_salvar"
+            style="@style/Widget.Material3.Button.ElevatedButton.Icon"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
@@ -82,8 +82,19 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintVertical_bias="1"/>
+            app:layout_constraintVertical_bias="1" />
 
+        <ProgressBar
+            android:id="@+id/progressbar"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:indeterminateTint="#FDFDFD"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -27,6 +27,7 @@
             />
 
         <TextView
+            android:inputType="textCapCharacters"
             android:id="@+id/carousel_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
